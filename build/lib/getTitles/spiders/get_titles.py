@@ -4,7 +4,7 @@ import os
 class TitleSpider(scrapy.Spider):
     name = "title"
     #get the list of domains from the file
-    with open('data\domains.txt', 'r') as f:
+    with open('data/domains.txt', 'r') as f:
         start_urls = f.readlines()
     #add the http:// to each domain
     start_urls = ['http://' + url.strip() for url in start_urls]
